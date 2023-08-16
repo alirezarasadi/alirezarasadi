@@ -1,0 +1,184 @@
+@font-face {
+    font-family: bnazanin;
+    src: url(/assest/font/BNazanin/BNazanin.ttf) format('truetype'), url(/assest/font/BNazanin/BNazanin.woff);
+
+}
+
+* {
+    font-family: bnazanin;
+}
+
+body,
+html {
+    font-size: 14px;
+}
+
+header {
+    width: 100%;
+    background-color: bisque;
+}
+
+nav {
+    width: 100%;
+}
+
+nav>ul {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: left;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(12, 113, 44);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0 2rem;
+}
+
+nav>ul>li {
+    margin: 0.25rem;
+    /* border-radius:5px;*/
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+}
+
+nav>ul>li:not(:last-child) {
+    border-right: 1px solid black;
+}
+
+nav>ul ul {
+    background-color: red;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    color: white;
+    width: 100%;
+}
+
+nav>ul>li:hover ul {
+    height: 150px;
+}
+
+form {
+    box-shadow: 1px 1px 4px rgba(100, 100, 100, 0.4);
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+textarea {
+    width: 50%;
+    height: 200px;
+    resize: none;
+}
+
+input,
+select {
+    border: 2px solid blue;
+    border-radius: 10px;
+    outline: none;
+    
+}
+
+.f1:hover {
+    box-shadow: 0px 0px 5px rgb(136, 78, 78);
+}
+
+.f1:focus {
+    border: 2px solid rgb(8, 86, 37);
+    outline: none;
+}
+
+.button {
+    background-color: aliceblue;
+    padding: 10px;
+    margin: 4px;
+    border-radius: 1px;
+    font-size: 1rem;
+    transition: all 0.4s;
+    cursor: pointer;
+    position: relative;
+}
+
+.button::after {
+    content: attr(data-title);
+    position: absolute;
+    top: -100%;
+    left: 20px;
+
+    background-color: coral;
+    width: 100px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0.5rem;
+    transition: all 0.4s linear;
+    opacity: 0;
+    z-index: -999;
+
+}
+
+.button:hover:after {
+    
+    opacity: 1;
+    z-index: 999;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 25px;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid coral;
+    opacity: 0;
+    z-index: -999;
+    visibility: hidden;
+    transition: all 0.4s linear;
+}
+
+.button:hover::before {
+    opacity: 1;
+    z-index: 999;
+    visibility: visible;
+}
+
+.button1 {
+    border: 1px solid green;
+    color: black;
+}
+
+.button1:hover {
+    background-color: green;
+
+}
+
+.button2 {
+    border: 1px solid red;
+    color: black;
+}
+
+.button2:hover {
+    background-color: red;
+
+}
+p{
+   text-align: justify;
+   text-transform: capitalize;
+   text-indent: 50px;
+   line-height: 1.2;
+   word-spacing: 2px;
+   white-space: normal;
+   font-size: 1rem;
+}
